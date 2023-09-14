@@ -4,7 +4,7 @@ const search = () =>{
 
     btnSearch.addEventListener("click", () =>{
         $.ajax({
-            url : 'http://www.omdbapi.com/?apikey=621c8a56&S=' + inputSearch.value,
+            url : 'https://www.omdbapi.com/?apikey=621c8a56&S=' + inputSearch.value,
             success : berhasil => {
                 const film = berhasil.Search;
                 console.log(film);
@@ -70,7 +70,7 @@ const getData = (film) => {
 
 const showDetail = idFilm =>{
     $.ajax({
-        url : "http://www.omdbapi.com/?apikey=621c8a56&i=" + idFilm,
+        url : "https://www.omdbapi.com/?apikey=621c8a56&i=" + idFilm,
         success : data => {
             const modalBody = document.getElementsByClassName('modal-body')[0];
             modalBody.innerHTML = "";
